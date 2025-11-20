@@ -7,11 +7,13 @@
         <router-link to="/contact">Contact</router-link>
       </nav>
     </header>
+
     <main>
       <router-view></router-view>
     </main>
   </div>
 </template>
+
 
 <style>
 body {
@@ -34,4 +36,5 @@ header nav a.router-link-exact-active {
 main {
   padding: 2rem;
 }
+
 </style>
