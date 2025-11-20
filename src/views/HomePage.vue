@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="left">
-      <h1>✍ 공부하는 예비 개발자</h1>
+      <h1>안녕하세요, 개발자 권동운 입니다.</h1>
       <div class="image">
         <img :src="image" alt="프로필 이미지" class="profile-img" />
-        <h2>권동운 / KwonDongWoon</h2><br>
+        
       </div>
 
       <div class="about-me">
@@ -16,28 +16,31 @@
     
         </div>
 
-      <div class="tech-stack">
-      <h1>Tech Stack</h1>
-      <ul>
-        <li>Vue 3 + Composition API</li>
-        <li>JavaScript / ES6+</li>
-        <li>HTML5 / CSS3 / Tailwind</li>
-        <li>Git / GitHub</li>
-      </ul>
+    <div class="skil-tools">
+      <h1>Skil & Tools</h1>
+
+      <div class="skil-tools-items">
+        <div class="language"><h1>언어</h1></div>
+        <div class="front-end"><h1>프론트엔드</h1></div>
+        <div class="back-end"><h1>백엔드</h1></div>
+      </div>
     </div>
-    </div>
+
+  </div>
     
     <div class="right">
       <div class="growing-developer">
       <h1> 🌱Growing Developer </h1>
         저는 성장 중인 개발자로 끊임없이 노력하고 있습니다.<br>
-        사용자들에게 가치 있는 서비를 제공하는 개발자가 되기 위해<br>
-        계속 공부하고 노력하겠습니다. 감사합니다.<br>
+        사용자들에게 가치 있는 서비를 제공하는 개발자가 되기 위해 계속 공부하고 노력하겠습니다. 감사합니다.<br>
         <br>
         私は成長中の開発者として絶えず努力しています。<br>
         ユーザーに価値のあるサービスを提供する開発者になるために
         ずっと勉強して頑張ります。<br>
         ありがとうございます。
+      </div>
+      <div>
+        <img :src="coding" alt="코딩이미지" class="coding" />
       </div>
     </div>
   </div>
@@ -45,11 +48,12 @@
 
 <script>
 import image from '@/assets/siru.jpg'
+import coding from '@/assets/codingimg.png'
 
 export default {
   name: "HomePage",
   setup() {
-    return { image }
+    return { image, coding }
   }  
 }
 </script>
@@ -75,6 +79,14 @@ export default {
   flex: 1; /* 공간 균등 분배 */
 }
 
+.right {
+  display: flex;
+  flex-direction: column; /* 세로로 쌓기 */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px; /* 내용과 이미지 간 간격 */
+}
+
 .profile-img {
   width: 300px;
   height: 300px;
@@ -82,16 +94,45 @@ export default {
   border-radius: 50%;
 }
 
+.coding{
+  padding-top: 30px;
+  width: 400px;
+  height: 380px;
+}
+
 ul {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-.tech-stack {
+.skil-tools {
   margin-top: 60px;
+  padding-top: 150px;
+}
+
+.about-me{
+  padding-top: 120px;
 }
 
 .growing-developer {
   padding: 50px;
+}
+
+.skil-tools {
+  width: 100%;
+}
+
+.skil-tools h1:first-child {
+  margin-bottom: 20px;
+}
+
+.skil-tools-items {
+  display: flex;
+  gap: 20px;
+}
+
+.skil-tools-items > div {
+  flex: 1;
+  text-align: center;
 }
 </style>
