@@ -1,20 +1,16 @@
 <template>
   <div>
     <h1>Contact</h1>
-    <form @submit.prevent="submitForm">
+    <form>
       <div>
-        <label for="name">이름:</label>
-        <input type="text" id="name" v-model="form.name" required>
+        <label for="name">👩‍💻 name: Kwon DongWoon</label>
       </div>
       <div>
-        <label for="email">이메일:</label>
-        <input type="email" id="email" v-model="form.email" required>
+        <label for="email">📧 email:kdu9699@gamil.com</label>
       </div>
       <div>
-        <label for="message">메시지:</label>
-        <textarea id="message" v-model="form.message" required></textarea>
+        <label for="message">💻 GitHub:github.com/KwonDongWoon </label>
       </div>
-      <button type="submit">보내기</button>
     </form>
   </div>
 </template>
@@ -30,14 +26,7 @@ export default {
       message: ''
     })
 
-    const submitForm = () => {
-      alert(`보내기 완료! \n이름: ${form.name}\n이메일: ${form.email}\n메시지: ${form.message}`)
-      form.name = ''
-      form.email = ''
-      form.message = ''
-    }
-
-    return { form, submitForm }
+    return { form}
   }
 }
 </script>
