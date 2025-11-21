@@ -1,9 +1,10 @@
 <template>
   <div class="contact-container">
-    <h1>Contact</h1>
+
 
     <div class="contact-content">
       <form class="left">
+        <h1>Contact</h1>
         <div>
           <label for="name">👩‍💻 name: Kwon DongWoon</label>
         </div>

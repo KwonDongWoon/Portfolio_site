@@ -26,7 +26,7 @@ export default {
   name: "ProjectsPage",
   setup() {
     const projects = ref([
-      { id: 4, name: 'QR 주문 시스템', description: 'Spring Boot 기반 학원 프로젝트', github:''},
+      { id: 4, name: 'QR 주문 시스템', description: 'Spring Boot 기반 프로젝트', github:'https://github.com/KwonDongWoon/QR_OrderSite.git'},
       { id: 3, name: '날씨 정보 앱', description: 'Vue + 오픈 API', github:'https://github.com/KwonDongWoon/Weather-app.git'},
       { id: 2, name: '영화검색 사이트', description: 'Vue + 오픈 API + Netlify 배포', github:'https://github.com/KwonDongWoon/Movie_vue.js.git' },
       { id: 1, name: '회의실예약 사이트', description: '전자정부프레임워크(eGovFrame) 기반 프로젝트', github:'https://github.com/KwonDongWoon/eGovFrame_Project01.git' },

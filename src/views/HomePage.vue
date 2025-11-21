@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="left">
-      <h1>안녕하세요, 개발자 권동운 입니다.</h1>
+      <h2>안녕하세요.</h2>
+      <h2>💡 도전과 성장을 즐기는 개발자 권동운입니다.</h2>
       <div class="image">
         <img :src="image" alt="프로필 이미지" class="profile-img" />
         
@@ -12,22 +13,39 @@
           안녕하세요.<br>
           고객에게 좋은 서비스를 개발하고 싶은 권동운 입니다.👩‍💻<br>
           저는 새로운 것을 배우는 걸 좋아하고, 팀원과 함께 아이디어를 나누며 성장하는 걸 중요하게 생각합니다.<br>
-          늘 사용자 입장에서 생각하며, 작은 디테일 하나까지 신경 쓰는 개발자가 되겠습니다.💪
+          늘 사용자 입장에서 생각하고 행동하며, 작은 디테일 하나까지<br> 신경 쓰는 개발자가 되겠습니다.💪
     
         </div>
 
-    <div class="skil-tools">
-      <h1>Skil & Tools</h1>
+<div class="skil-tools">
+  <h1>Skill & Tools</h1>
 
-      <div class="skil-tools-items">
-        <div class="language"><h1>언어</h1></div>
-        <div class="front-end"><h1>프론트엔드</h1></div>
-        <div class="back-end"><h1>백엔드</h1></div>
+  <div class="skil-tools-items">
+
+    <!-- 백엔드 -->
+    <div class="category">
+      <h2>Backend</h2>
+      <div class="icons">
+        <img src="@/assets/language/java.png" alt="Java">
+        <img src="@/assets/tools/springboot.png" alt="Springboot">
+        <img src="@/assets/tools/nodejs.png" alt="Nodejs">
+      </div>
+    </div>
+
+    <!-- 프론트엔드 -->
+    <div class="category">
+      <h2>Frontend</h2>
+      <div class="icons">
+        <img src="@/assets/language/javascript.png" alt="JavaScript">
+        <img src="@/assets/tools/vue.png" alt="Vue" /> 
+        <img src="@/assets/language/html.png" alt="html">
+        <img src="@/assets/language/css.png" alt="css">   
       </div>
     </div>
 
   </div>
-    
+</div>
+</div>    
     <div class="right">
       <div class="growing-developer">
       <h1> 🌱Growing Developer </h1>
@@ -42,12 +60,41 @@
       <div>
         <img :src="coding" alt="코딩이미지" class="coding" />
       </div>
+      <div class="skil-tools">
+  <div class="skil-tools-items2">
+
+    <!-- 툴&데이터 -->
+    <div class="category">
+      <h2>Database</h2>
+      <div class="icons">
+        <img src="@/assets/tools/mysql.png" alt="MySQL">
+        <img src="@/assets/tools/OracleSQL.png" alt="OracleSQL">    
+      </div>
     </div>
+
+    <!-- 툴 -->
+    <div class="category">
+      <h2>Tools & DevOps</h2>
+      <div class="icons">
+        <img src="@/assets/tools/eclipse.png" alt="eclipse" />
+        <img src="@/assets/tools/vscode.png" alt="vscode" />
+        <img src="@/assets/tools/apache.png" alt="Apache">
+        <img src="@/assets/tools/ubuntu.png" alt="ubuntu" />       
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <!--저작권 표시-->
+    <div class="icon-credit">
+    Icons by <a href="https://www.flaticon.com/kr/" target="_blank">Flaticon</a>
+    (Freepik creators)
   </div>
 </template>
 
 <script>
-import image from '@/assets/siru.jpg'
+import image from '@/assets/kdw3.jpg'
 import coding from '@/assets/codingimg.png'
 
 export default {
@@ -112,6 +159,7 @@ ul {
 
 .about-me{
   padding-top: 120px;
+  padding-bottom: 28px;
 }
 
 .growing-developer {
@@ -119,20 +167,52 @@ ul {
 }
 
 .skil-tools {
-  width: 100%;
-}
-
-.skil-tools h1:first-child {
-  margin-bottom: 20px;
+  padding: 60px 0;
 }
 
 .skil-tools-items {
   display: flex;
-  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+
+}
+.skil-tools-items2{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+  padding-top: 45px;
 }
 
-.skil-tools-items > div {
-  flex: 1;
-  text-align: center;
+.category {
+  background: #f7f7f7;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.category h2 {
+  margin-bottom: 15px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+}
+.icon-credit{
+  padding-top: 50px;
 }
 </style>
