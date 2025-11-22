@@ -158,7 +158,7 @@ ul {
 }
 
 .about-me{
-  padding-top: 120px;
+  padding-top: 138px;
   padding-bottom: 28px;
 }
 
