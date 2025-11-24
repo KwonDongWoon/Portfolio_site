@@ -1,3 +1,4 @@
+[포트폴리오 사이트 화면 정의서.pdf](https://github.com/user-attachments/files/23700721/default.pdf)
 # my-vue-project
 
 ## Project setup
